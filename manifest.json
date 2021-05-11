@@ -1,0 +1,31 @@
+{
+  "name": "Yobot",
+  "description": "Yobot for youtube videos",
+  "author": "Haidar Iqbal",
+  "manifest_version": 2,
+  "version": "1.0",
+  "icons": {
+    "128": "icon.png"
+  },
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "permissions": [
+    "<all_urls>",
+    "background",
+    "tabs"
+  ],
+  "content_scripts": [
+    {
+      "js": [
+        "jquery.min.js",
+        "content.js"
+      ],
+      "matches": [
+        "<all_urls>",
+        "*://*/*"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
